@@ -46,13 +46,13 @@
 
 // using array reduce() method
 
-var arr = [1, 2, 5, 10, 20] // Question Give Array
+// var arr = [1, 2, 5, 10, 20] // Question Give Array
 
-var sum = arr.reduce((a, i) => {
-  return a + i
-})
+// var sum = arr.reduce((a, i) => {
+//   return a + i
+// })
 
-console.log(sum)
+// console.log(sum)
 
 // logic number no 1
 // var sum = 0
@@ -69,3 +69,13 @@ console.log(sum)
 //     i++;
 // }
 // console.log(sum)
+
+// Q:- Find the output?
+
+var a = 3
+var b = a++
+var c = ++a
+
+console.log(a)
+console.log(b)
+console.log(c)
