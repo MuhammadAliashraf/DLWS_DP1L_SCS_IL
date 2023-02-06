@@ -79,3 +79,31 @@
 // console.log(a)
 // console.log(b)
 // console.log(c)
+
+// Q:- How to convert an Object {} into an Array [] in JavaScript?
+// let obj = { id: "1", name: "Test User", age: "25", profession: "Developer" };
+
+// const objtoarrayKeys=Object.keys(obj)
+// const objtoarrayValues=Object.values(obj)
+// const objtoarrayentries=Object.entries(obj)
+// console.log(objtoarrayKeys);
+// console.log(objtoarrayKeys);
+// console.log(objtoarrayentries);
+
+// Q:- How to convert an Array [] to Object {} in JavaScript?
+// let arr = ["1", "Test User", "25", "Developer"];
+// let arr1 = [
+//     ["id", "1"],
+//     ["name", "Test User"],
+//     ["age", "25"],
+//     ["profession", "Developer"],
+//   ];
+
+// const arr2=Object.assign({},arr1);
+// const arr3={...arr1};
+// const arr4=Object.fromEntries(arr1);
+// console.log(arr)
+// console.log(arr2);
+// console.log(arr3);
+// console.log(arr4);
+
