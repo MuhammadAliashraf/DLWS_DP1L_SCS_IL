@@ -105,5 +105,12 @@
 // console.log(arr)
 // console.log(arr2);
 // console.log(arr3);
-// console.log(arr4);
+// console.log("arr4");\
+
+const arr=[1,2,3]
+const newarr=arr.map(function(num){
+    return num *2;
+})
+console.log(newarr)
+
 
