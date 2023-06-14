@@ -112,3 +112,23 @@
 //     return num *2;
 // })
 // console.log(newarr)
+
+// Problem:
+// Write a function called "uniqueElements" that takes in an array of numbers as input. The function should return a new array that contains only the unique elements from the original array, in the order they appear.
+
+const func = () => {
+  const uniqueElements = [1, 2, 3, 2, 4, 5, 4, 6, 7, 6, 8]
+  const filteredArray = uniqueElements.filter((value, index, arr) => {
+      return arr.indexOf(value) === index
+    })
+    console.log(filteredArray)
+}
+func()
+
+// const newfun=()=>{
+//     const uniqueElements = [1, 2, 3, 2, 4, 5, 4, 6, 7, 6, 8]
+//     const newarr=uniqueElements.forEach((value,index,arr)=>{
+//         return console.log(value)
+//     })
+// }
+// newfun()
