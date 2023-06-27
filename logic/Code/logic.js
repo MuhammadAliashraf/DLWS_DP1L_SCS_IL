@@ -135,10 +135,18 @@
 // Date-6/27/23
 // Write a function called sumArray that takes in an array of numbers and returns the sum of all the numbers in the array.
 // Using reduce Method
-// Where first parameter Of reduce function a and a taking the value on each time when they run 
+// Where first parameter Of reduce function a and a taking the value on each time when they run
 // function SummOfArray() {
 //   const arr = [2, 4, 4, 90];
 //   const sum = arr.reduce((a, b) => a + b);
 //   console.log(sum);
 // }
 // SummOfArray();
+// using for loop
+var arr = [2, 4, 10];
+var sum = 0;
+for (var i = 0; i < arr.length; i++) {
+  sum += arr[i];
+}
+console.log(sum);
+
