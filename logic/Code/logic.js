@@ -143,10 +143,18 @@
 // }
 // SummOfArray();
 // using for loop
-var arr = [2, 4, 10];
-var sum = 0;
-for (var i = 0; i < arr.length; i++) {
-  sum += arr[i];
-}
-console.log(sum);
+// var arr = [2, 4, 10];
+// var sum = 0;
+// for (var i = 0; i < arr.length; i++) {
+//   sum += arr[i];
+// }
+// console.log(sum);
 
+// Write a function called isPalindrome that takes in a string and returns true if the string is a palindrome, and false otherwise.
+var name = "Maham";
+function isPalindrome() {
+  
+  console.log(name);
+}
+
+isPalindrome(name);
