@@ -115,15 +115,14 @@
 
 // Problem:
 // Write a function called "uniqueElements" that takes in an array of numbers as input. The function should return a new array that contains only the unique elements from the original array, in the order they appear.
-
-const func = () => {
-  const uniqueElements = [1, 2, 3, 2, 4, 5, 4, 6, 7, 6, 8]
-  const filteredArray = uniqueElements.filter((value, index, arr) => {
-      return arr.indexOf(value) === index
-    })
-    console.log(filteredArray)
-}
-func()
+// const func = () => {
+//   const uniqueElements = [1, 2, 3, 2, 4, 5, 4, 6, 7, 6, 8]
+//   const filteredArray = uniqueElements.filter((value, index, arr) => {
+//       return arr.indexOf(value) === index
+//     })
+//     console.log(filteredArray)
+// }
+// func()
 
 // const newfun=()=>{
 //     const uniqueElements = [1, 2, 3, 2, 4, 5, 4, 6, 7, 6, 8]
@@ -132,3 +131,14 @@ func()
 //     })
 // }
 // newfun()
+
+// Date-6/27/23
+// Write a function called sumArray that takes in an array of numbers and returns the sum of all the numbers in the array.
+// Using reduce Method
+// Where first parameter Of reduce function a and a taking the value on each time when they run 
+// function SummOfArray() {
+//   const arr = [2, 4, 4, 90];
+//   const sum = arr.reduce((a, b) => a + b);
+//   console.log(sum);
+// }
+// SummOfArray();
