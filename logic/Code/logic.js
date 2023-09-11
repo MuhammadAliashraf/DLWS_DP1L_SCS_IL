@@ -112,3 +112,38 @@
 //     return num *2;
 // })
 // console.log(newarr)
+
+// console.log([],[])
+
+//Higher Order Functions Convert old Compoent to new Comonent
+
+// JS FUNCTIONS
+
+// MAP : Old Array Ko Convert Karta ha New array main jb hm Array k Each elemnt k st koi b opreation perform karty hn
+const numbers = [0, 1, 2, 3, 4, 5]
+
+const newnumbers = numbers.map((e) => e * 2)
+
+console.log(numbers)
+console.log(newnumbers)
+
+// Filter :ya hm ko True or false ki base par new array return karta ha kesi condition ki base par
+
+const filter1 = [0, 1, 'a', 'a', 'a', 'a', 'a', 'b', true, false]
+
+const filter2 = filter1.filter((e) => {
+  return e
+})
+
+console.log(filter1)
+console.log(filter2)
+
+// Reduce: Merage the small item into single value
+const Add = [2, 4, 6, 8, 10]
+
+const Added = Add.reduce((e, i) => {
+  return e + i
+})
+
+console.log(Add)
+console.log(Added)

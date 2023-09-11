@@ -25,10 +25,12 @@ function App() {
     },
   ]
 
+
   return (
     <div className="App">
       <h2>List of low calorie desserts:</h2>
-      <Dessert data={desserts} />
+      {/* <Dessert data={desserts} /> */}
+      <newDesserts/>
     </div>
   )
 }
