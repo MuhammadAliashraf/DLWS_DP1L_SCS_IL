@@ -117,6 +117,134 @@
 
 //Higher Order Functions Convert old Compoent to new Comonent
 
+// Problem:
+// Write a function called "uniqueElements" that takes in an array of numbers as input. The function should return a new array that contains only the unique elements from the original array, in the order they appear.
+// const func = () => {
+//   const uniqueElements = [1, 2, 3, 2, 4, 5, 4, 6, 7, 6, 8]
+//   const filteredArray = uniqueElements.filter((value, index, arr) => {
+//       return arr.indexOf(value) === index
+//     })
+//     console.log(filteredArray)
+// }
+// func()
+
+// const newfun=()=>{
+//     const uniqueElements = [1, 2, 3, 2, 4, 5, 4, 6, 7, 6, 8]
+//     const newarr=uniqueElements.forEach((value,index,arr)=>{
+//         return console.log(value)
+//     })
+// }
+// newfun()
+
+// Date-6/27/23
+// Write a function called sumArray that takes in an array of numbers and returns the sum of all the numbers in the array.
+// Using reduce Method
+// Where first parameter Of reduce function a and a taking the value on each time when they run
+// function SummOfArray() {
+//   const arr = [2, 4, 4, 90];
+//   const sum = arr.reduce((a, b) => a + b);
+//   console.log(sum);
+// }
+// SummOfArray();
+// using for loop
+// var arr = [2, 4, 10];
+// var sum = 0;
+// for (var i = 0; i < arr.length; i++) {
+//   sum += arr[i];
+// }
+// console.log(sum);
+
+// Write a function called isPalindrome that takes in a string and returns true if the string is a palindrome, and false otherwise.
+// var name = "Maham";
+// function isPalindrome() {
+//   console.log(name);
+// }
+
+// isPalindrome(name);
+
+// // Spread operator and Destructuring
+// // Example:1 taking average useing Sprread operator
+// const arr = [1, 2, 3, 4, 5, 6];
+// function average(a, b, c) {
+//   return a + b + c / 3;
+// }
+// const a = average(...arr);
+// console.log(a);
+
+// // Example:2 making New arrar with old array include
+// // Where [...arr] having all the elements of the old array
+// const newarr = [...arr, 7, 8, 9, 10];
+// console.log(newarr);
+
+// // Example:3 copy OLd array
+// const b = [...arr];
+// console.log(b);
+
+// // Example:4 Concatenaation in array
+// const c = [1, 2, 3, 4, 5];
+// const d = [6, 7, 8, 9, 10];
+// // concatrnating c and d in conarray
+// const conarray = [...c, ...d];
+// console.log("Concating Array", conarray);
+
+// //Sperad operators With Objects
+// const obj1 = {
+//   name: "ali",
+//   age: 20,
+//   program: "BSCS",
+// };
+// console.log("obj1", obj1);
+// // Copy All the elements From obj1 and cHange the name to Muhammad Ali
+
+// const obj2 = { ...obj1, name: "Muhammad Ali" };
+// console.log("obj2", obj2);
+
+// // Example:2  getting the value From Object Called Desturing
+// const { name, age, program } = obj1;
+// console.log(name, age, program);
+
+// ----------------------------------------------async------------------------------------------------
+// console.log("Upper Console")
+// setTimeout(()=>{
+//   console.log("In Side Functions!");
+// },1000)
+// console.log("Lower Console")
+
+// ----------------------------------------Map-Filter-Reduce-----------------------
+//Map
+let a = [1, 2, 3, 4, 5, 6];
+let b = a.map((value, index) => {
+  //Wo km jo Array ki har value k st karna ho like anthing Example is Given Below
+  return value * 2;
+  //getting the new array in b and each value multiply by 2
+});
+// console.log(a)
+// console.log(b)
+
+//Filter : This is use to Filter the Data From Array And return Aa new Array
+let c = [12, 23, 345, 546, 12, 2, 1, 3, 4, 55, 6, 324, 5634, 3, 4, 234, 87, 10];
+// getting the value less then 10
+let d = c.filter((value) => {
+  return value < 10;
+});
+// console.log(c);
+// console.log("Values Less then 10 From c",d);
+
+//Reduce"
+let e = [2, 2, 6];
+let f = e.reduce((value1, value2) => {
+  return value1 + value2;
+});
+//BackEnd Working Of reduce Menthod 
+//f=10 why?
+// 2,2,6
+// 2+2,6
+// 4,6
+// 4+6,
+// 10
+// console.log(f)
+
+
 // JS FUNCTIONS
 
 // MAP : Old Array Ko Convert Karta ha New array main jb hm Array k Each elemnt k st koi b opreation perform karty hn
