@@ -291,115 +291,144 @@
 
 // }
 
-// Promise Form Chai Or Code
+// --------------------------Promise Form Chai Or Code
 //Without Connecting to .then
-const promiseOne = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    console.log("async task Completed");
-  }, 1000);
-});
+// const promiseOne = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     console.log("async task Completed");
+//   }, 1000);
+// });
 
-promiseOne.then(() => {
-  console.log("Promise Resolved");
-});
+// promiseOne.then(() => {
+//   console.log("Promise Resolved");
+// });
 
-//Promise with .then connection
-new Promise((resolve, reject) => {
-  setTimeout(() => {
-    console.log("Async task 2");
-    resolve();
-  }, 1000);
-}).then(() => {
-  console.log("Async Task Two Promise Resolved!");
-});
+// //Promise with .then connection
+// new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     console.log("Async task 2");
+//     resolve();
+//   }, 1000);
+// }).then(() => {
+//   console.log("Async Task Two Promise Resolved!");
+// });
 
-//Data Passing in  The Resolve + Error With Reject
-const promiseThree = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    const Number = 2 + 2;
-    if (Number === 4) {
-      resolve(Number);
-    } else {
-      reject(`Condition fail`);
-    }
-  }, 1000);
-});
+// //Data Passing in  The Resolve + Error With Reject
+// const promiseThree = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     const Number = 2 + 2;
+//     if (Number === 4) {
+//       resolve(Number);
+//     } else {
+//       reject(`Condition fail`);
+//     }
+//   }, 1000);
+// });
 
-promiseThree
-  .then((data) => {
-    console.log("Calculation Result", data);
-  })
-  .catch((error) => {
-    console.log("Error", error);
-  });
+// promiseThree
+//   .then((data) => {
+//     console.log("Calculation Result", data);
+//   })
+//   .catch((error) => {
+//     console.log("Error", error);
+//   });
 
-//Where Data Go when we recive in the in then
+// //Where Data Go when we recive in the in then
 
-const promiseFive = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    let error = false;
-    if (!error) {
-      const data = {
-        name: "John Doe",
-        age: 30,
-      };
-      resolve(data);
-    } else {
-      reject("There is an error");
-    }
-  }, 1000);
-});
+// const promiseFive = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     let error = false;
+//     if (!error) {
+//       const data = {
+//         name: "John Doe",
+//         age: 30,
+//       };
+//       resolve(data);
+//     } else {
+//       reject("There is an error");
+//     }
+//   }, 1000);
+// });
 
-promiseFive
-  .then((myData) => {
-    return myData.name; //Yahan sy Data return Hoga New Then Main variable Ban kar nh kar skty hm.... /// State main save kar wa lo Data
-  })
-  .then((username) => {
-    console.log("Username :", username);
-  })
-  .catch((error) => {
-    console.log("ERROR:", error);
-  });
+// promiseFive
+//   .then((myData) => {
+//     return myData.name; //Yahan sy Data return Hoga New Then Main variable Ban kar nh kar skty hm.... /// State main save kar wa lo Data
+//   })
+//   .then((username) => {
+//     console.log("Username :", username);
+//   })
+//   .catch((error) => {
+//     console.log("ERROR:", error);
+//   });
 
-//Handle Promise Using async & await
-const promiseSix = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    let error = true;
-    if (!error) {
-      const data = {
-        name: "Promise Six",
-        age: 30,
-      };
-      resolve(data);
-    } else {
-      reject("There is an error in Promise Six");
-    }
-  }, 1000);
-});
+// //Handle Promise Using async & await
+// const promiseSix = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     let error = true;
+//     if (!error) {
+//       const data = {
+//         name: "Promise Six",
+//         age: 30,
+//       };
+//       resolve(data);
+//     } else {
+//       reject("There is an error in Promise Six");
+//     }
+//   }, 1000);
+// });
 
-const usingPromiseSix = async () => {
-  try {
-    const data = await promiseSix;
-    console.log(data);
-  } catch (error) {
-    console.error(error);
-  }
-};
-usingPromiseSix();
+// const usingPromiseSix = async () => {
+//   try {
+//     const data = await promiseSix;
+//     console.log(data);
+//   } catch (error) {
+//     console.error(error);
+//   }
+// };
+// usingPromiseSix();
 
-// API CALL USING URL=https://fakestoreapi.com/products/
+// // API CALL USING URL=https://fakestoreapi.com/products/
 
-const getAllProducts = async () => {
-  try {
-    const res = await fetch("https://fakestoreapi.com/products/1");
-    const product = await res.json(); //time taking into json
-  } catch (error) {
-    console.error(error);
-  }
-};
-getAllProducts();
+// const getAllProducts = async () => {
+//   try {
+//     const res = await fetch("https://fakestoreapi.com/products/1");
+//     const product = await res.json(); //time taking into json
+//   } catch (error) {
+//     console.error(error);
+//   }
+// };
+// getAllProducts();
 
-//with .then & .catch method
+// //with .then & .catch method
+
+// //Problem # 1
+// // Promise Resolved When the Button is Clicked
+// const Myloading = new Promise((resolve, reject) => {
+//   resolve();
+// });
+
+// const btn = document.getElementById("btn").addEventListener("click", () => {
+//   Myloading.then(() => {
+//     console.log("Promise Resolved With Button Click");
+//   });
+// });
+
+// async function myFun() {
+//   let result = (await 2) + 2;
+//   return result;
+// }
+
+// const res = myFun();
+// console.log(res);
+
+// ///////////
+// const useAwait = async () => {
+//   console.log("first");
+//   await console.log("Second");
+//   console.log("third");
+// };
+
+// useAwait()
 
 
 
@@ -407,17 +436,3 @@ getAllProducts();
 
 
 
-
-
-
-//Problem # 1
-// Promise Resolved When the Button is Clicked
-const Myloading = new Promise((resolve, reject) => {
-  resolve();
-});
-
-const btn = document.getElementById("btn").addEventListener("click", () => {
-  Myloading.then(() => {
-    console.log("Promise Resolved With Button Click");
-  });
-});
