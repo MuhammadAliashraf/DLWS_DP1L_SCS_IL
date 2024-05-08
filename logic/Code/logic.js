@@ -211,31 +211,31 @@
 // console.log("Lower Console")
 
 // ----------------------------------------Map-Filter-Reduce-----------------------
-//Map
-let a = [1, 2, 3, 4, 5, 6];
-let b = a.map((value, index) => {
-  //Wo km jo Array ki har value k st karna ho like anthing Example is Given Below
-  return value * 2;
-  //getting the new array in b and each value multiply by 2
-});
-// console.log(a)
-// console.log(b)
+// //Map
+// let a = [1, 2, 3, 4, 5, 6];
+// let b = a.map((value, index) => {
+//   //Wo km jo Array ki har value k st karna ho like anthing Example is Given Below
+//   return value * 2;
+//   //getting the new array in b and each value multiply by 2
+// });
+// // console.log(a)
+// // console.log(b)
 
-//Filter : This is use to Filter the Data From Array And return Aa new Array
-let c = [12, 23, 345, 546, 12, 2, 1, 3, 4, 55, 6, 324, 5634, 3, 4, 234, 87, 10];
-// getting the value less then 10
-let d = c.filter((value) => {
-  return value < 10;
-});
-// console.log(c);
-// console.log("Values Less then 10 From c",d);
+// //Filter : This is use to Filter the Data From Array And return Aa new Array
+// let c = [12, 23, 345, 546, 12, 2, 1, 3, 4, 55, 6, 324, 5634, 3, 4, 234, 87, 10];
+// // getting the value less then 10
+// let d = c.filter((value) => {
+//   return value < 10;
+// });
+// // console.log(c);
+// // console.log("Values Less then 10 From c",d);
 
-//Reduce"
-let e = [2, 2, 6];
-let f = e.reduce((value1, value2) => {
-  return value1 + value2;
-});
-//BackEnd Working Of reduce Menthod 
+// //Reduce"
+// let e = [2, 2, 6];
+// let f = e.reduce((value1, value2) => {
+//   return value1 + value2;
+// });
+//BackEnd Working Of reduce Menthod
 //f=10 why?
 // 2,2,6
 // 2+2,6
@@ -244,34 +244,180 @@ let f = e.reduce((value1, value2) => {
 // 10
 // console.log(f)
 
-
 // JS FUNCTIONS
 
 // MAP : Old Array Ko Convert Karta ha New array main jb hm Array k Each elemnt k st koi b opreation perform karty hn
-const numbers = [0, 1, 2, 3, 4, 5]
+// const numbers = [0, 1, 2, 3, 4, 5]
 
-const newnumbers = numbers.map((e) => e * 2)
+// const newnumbers = numbers.map((e) => e * 2)
 
-console.log(numbers)
-console.log(newnumbers)
+// // Filter :ya hm ko True or false ki base par new array return karta ha kesi condition ki base par
 
-// Filter :ya hm ko True or false ki base par new array return karta ha kesi condition ki base par
+// const filter1 = [0, 1, 'a', 'a', 'a', 'a', 'a', 'b', true, false]
 
-const filter1 = [0, 1, 'a', 'a', 'a', 'a', 'a', 'b', true, false]
+// const filter2 = filter1.filter((e) => {
+//   return e
+// })
 
-const filter2 = filter1.filter((e) => {
-  return e
-})
+// // Reduce: Merage the small item into single value
+// const Add = [2, 4, 6, 8, 10]
 
-console.log(filter1)
-console.log(filter2)
+// const Added = Add.reduce((e, i) => {
+//   return e + i
+// })
 
-// Reduce: Merage the small item into single value
-const Add = [2, 4, 6, 8, 10]
+// const l1 = [2, 4, 3];
+// const l2 = [5, 6, 4];
 
-const Added = Add.reduce((e, i) => {
-  return e + i
-})
+// const l4 = l1.reverse().join("");
+// const l5 = l2.reverse().join("");
 
-console.log(Add)
-console.log(Added)
+// const list = parseInt(l4) + parseInt(l5);
+// let digits = [...list.toString()].map(Number);
+// console.log(digits.reverse());
+
+// Data Types
+// premitive Data Type
+// Number
+// String
+// null
+// undefined
+// Boolean
+// // non premitive Data Type
+// Object
+// Array
+
+// class MyClass{ // Type OF Class Is Function Behind The seen
+
+// }
+
+// Promise Form Chai Or Code
+//Without Connecting to .then
+const promiseOne = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    console.log("async task Completed");
+  }, 1000);
+});
+
+promiseOne.then(() => {
+  console.log("Promise Resolved");
+});
+
+//Promise with .then connection
+new Promise((resolve, reject) => {
+  setTimeout(() => {
+    console.log("Async task 2");
+    resolve();
+  }, 1000);
+}).then(() => {
+  console.log("Async Task Two Promise Resolved!");
+});
+
+//Data Passing in  The Resolve + Error With Reject
+const promiseThree = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    const Number = 2 + 2;
+    if (Number === 4) {
+      resolve(Number);
+    } else {
+      reject(`Condition fail`);
+    }
+  }, 1000);
+});
+
+promiseThree
+  .then((data) => {
+    console.log("Calculation Result", data);
+  })
+  .catch((error) => {
+    console.log("Error", error);
+  });
+
+//Where Data Go when we recive in the in then
+
+const promiseFive = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    let error = false;
+    if (!error) {
+      const data = {
+        name: "John Doe",
+        age: 30,
+      };
+      resolve(data);
+    } else {
+      reject("There is an error");
+    }
+  }, 1000);
+});
+
+promiseFive
+  .then((myData) => {
+    return myData.name; //Yahan sy Data return Hoga New Then Main variable Ban kar nh kar skty hm.... /// State main save kar wa lo Data
+  })
+  .then((username) => {
+    console.log("Username :", username);
+  })
+  .catch((error) => {
+    console.log("ERROR:", error);
+  });
+
+//Handle Promise Using async & await
+const promiseSix = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    let error = true;
+    if (!error) {
+      const data = {
+        name: "Promise Six",
+        age: 30,
+      };
+      resolve(data);
+    } else {
+      reject("There is an error in Promise Six");
+    }
+  }, 1000);
+});
+
+const usingPromiseSix = async () => {
+  try {
+    const data = await promiseSix;
+    console.log(data);
+  } catch (error) {
+    console.error(error);
+  }
+};
+usingPromiseSix();
+
+// API CALL USING URL=https://fakestoreapi.com/products/
+
+const getAllProducts = async () => {
+  try {
+    const res = await fetch("https://fakestoreapi.com/products/1");
+    const product = await res.json(); //time taking into json
+  } catch (error) {
+    console.error(error);
+  }
+};
+getAllProducts();
+
+//with .then & .catch method
+
+
+
+
+
+
+
+
+
+
+//Problem # 1
+// Promise Resolved When the Button is Clicked
+const Myloading = new Promise((resolve, reject) => {
+  resolve();
+});
+
+const btn = document.getElementById("btn").addEventListener("click", () => {
+  Myloading.then(() => {
+    console.log("Promise Resolved With Button Click");
+  });
+});
