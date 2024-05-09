@@ -430,9 +430,15 @@
 
 // useAwait()
 
+// ----------------------------------The Complete JavaScript Course | Trailer | Zero to Advanced-----------------------------------------
+
+// Story of JavaScript | JavaScript History | The Complete JavaScript Course | Ep.01 ---- Notes
 
 
+// Brendan Eich Developer Of JavaScript
+// ECMA (Organization): Europen Computer Manufacturers Association 
+// Google V8 Engine
 
-
+// REPL === console.log 
 
 

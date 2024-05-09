@@ -11,7 +11,6 @@ const intersectionOdTwoCircle = (circleRadius) => {
   const y1 = firstCircle.y;
   const x2 = secondCircle?.x;
   const y2 = secondCircle?.y;
-
   return circleIntersect(x1, y1, circleRadius, x2, y2, circleRadius);
 };
 
