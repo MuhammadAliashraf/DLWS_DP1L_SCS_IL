@@ -34,4 +34,4 @@ const job = "Software Engineer";
 const city = "Karachi";
 const country = "Pakistan";
 
-console.log(`My Name is ${name} & age is ${age}`);
+console.log(`My Name is ${name} & age is ${age}`); 
