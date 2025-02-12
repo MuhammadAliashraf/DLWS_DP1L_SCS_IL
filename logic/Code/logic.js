@@ -434,11 +434,59 @@
 
 // Story of JavaScript | JavaScript History | The Complete JavaScript Course | Ep.01 ---- Notes
 
-
 // Brendan Eich Developer Of JavaScript
-// ECMA (Organization): Europen Computer Manufacturers Association 
+// ECMA (Organization): Europen Computer Manufacturers Association
 // Google V8 Engine
 
-// REPL === console.log 
+// REPL === console.log
 
+// var let const in javaScript
 
+// var a = 10;
+// function f() {
+//   var b = 20;
+//   console.log(a, b);
+// }
+// f();
+
+// console.log(a); // 10
+
+// var a = 10;
+
+// // User can re-declare
+// // variable using var
+// var a = 8;
+
+// // User can update var variable
+// a = 7;
+// console.log(a); // 7
+
+// let b = 10;
+
+// // User can re-declare
+// // variable using var
+// // let b = 8
+
+// // User can update let variable
+// b = 7;
+
+// console.log(b);
+
+// const c = 10;
+
+// // User can re-declare
+// // variable using var
+// // const c = 8
+
+// // User can update var variable
+// console.log(c);
+
+// block scope variable declaration in javaScript
+const id = 10;
+function f() {
+  const id = 20;
+  //   console.log(a, b);
+}
+f();
+
+console.log(id); // 10
